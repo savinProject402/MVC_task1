@@ -1,0 +1,21 @@
+@model System.Collections.Generic.List<dynamic>
+
+@{
+    ViewBag.Title = "Numbers Pairwise Not Similar";
+}
+
+<h2>Numbers Pairwise Not Similar</h2>
+<hr />
+@if (Model == null || !Model.Any())
+{
+    <p>No pairs of non-similar triangles found.</p>
+}
+else
+{
+    @foreach (var pair in Model)
+    {
+        <p>Triangle 1: (@pair.t1.Side1, @pair.t1.Side2, @pair.t1.Side3)</p>
+        <p>Triangle 2: (@pair.t2.Side1, @pair.t2.Side2, @pair.t2.Side3)</p>
+        <hr />
+    }
+}

@@ -1,0 +1,13 @@
+@model Triangles.Info
+
+@{
+    ViewBag.Title = "Triangle Info";
+}
+
+<h2>Triangle Info</h2>
+<hr />
+<p>Triangle: (@ViewBag.Sides[0], @ViewBag.Sides[1], @ViewBag.Sides[2])</p>
+<p>Reduced: (@ViewBag.NormalizedSides[0].ToString("F2"), @ViewBag.NormalizedSides[1].ToString("F2"), @ViewBag.NormalizedSides[2].ToString("F2"))</p>
+<p>Area = @ViewBag.Area.ToString("F2")</p>
+<p>Perimeter = @ViewBag.Perimeter.ToString("F2")</p>
+<hr />
